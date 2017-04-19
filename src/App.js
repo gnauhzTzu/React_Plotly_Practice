@@ -23,6 +23,7 @@ class App extends React.Component {
 
     var urlPrefix = 'http://api.openweathermap.org/data/2.5/forecast?q=';
     var urlSuffix = '&APPID=XXX&units=metric';
+
     var url = urlPrefix + location + urlSuffix;
 
     var self = this;
@@ -49,10 +50,12 @@ class App extends React.Component {
   };
 
   changeLocation = (evt) => {
+
 /*    this.setState({
       location: evt.target.value
     });*/
     this.props.dispatch(changeLocation(evt.target.value));
+
   };
 
   onPlotClick = (data) => {
